@@ -1,20 +1,34 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Moventa - Film & Dizi Keşif Platformu</title>
-    <meta name="description" content="Moventa ile binlerce film ve diziyi keşfedin. IMDb puanları, fragmanlar ve kişisel izleme listeleri." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moventa - Film & Dizi Keşif Platformu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Moventa</div>
+    <nav>
+      <a href="#">Filmler</a>
+      <a href="#">Diziler</a>
+      <a href="#">Listem</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Film ve Dizileri Keşfet</h1>
+    <p>IMDb puanları, fragmanlar ve kişisel izleme listeleri ile yeni içerikleri keşfet.</p>
+    <a href="#" class="btn">Keşfetmeye Başla</a>
+  </section>
+
+  <footer>
+    © 2026 Moventa
+  </footer>
+
+</body>
 </html>
