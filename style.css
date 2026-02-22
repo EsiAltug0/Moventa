@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background: #0a0e1a;
+  color: white;
+}
+
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #3B82F6;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #3B82F6;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  background: linear-gradient(to right, rgba(10,14,26,0.95), rgba(10,14,26,0.5)),
+              url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba') center/cover;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #bbb;
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.btn {
+  background: #3B82F6;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  border-top: 1px solid #222;
+}
