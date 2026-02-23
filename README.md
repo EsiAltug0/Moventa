@@ -34,10 +34,13 @@ Fragman izleme özelliği
 Favorilere ekleme
 
 “İzledim” ve “İzleyeceğim” listesi
+
 Yorum ve puanlama sistemi
 ## kullanılan teknolojiler
 html
+
 css
+
 JavaScript
 ## kurulum bilgisi
 
