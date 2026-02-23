@@ -17,9 +17,6 @@ yorum ve puanlama sistemi
 ## kullanılan teknolojiler
 html
 css
-javaScript
-php
-mysql
 ## kurulum bilgisi
 
 ## canlı linki
