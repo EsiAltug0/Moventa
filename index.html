@@ -1,34 +1,507 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moventa - Film & Dizi Keşif Platformu</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moventa - Film ve Dizi Keşif Platformu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">🎬</span>
+                <span class="logo-text">MOVENTA</span>
+            </div>
 
-  <header>
-    <div class="logo">Moventa</div>
-    <nav>
-      <a href="#">Filmler</a>
-      <a href="#">Diziler</a>
-      <a href="#">Listem</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#movies" class="nav-link">Filmler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tv" class="nav-link">Diziler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#discover" class="nav-link">Keşfet</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="search-btn" onclick="toggleSearch()">
+                    🔍
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    🌙
+                </button>
+                <button class="watchlist-btn">
+                    📌 İzleme Listesi
+                </button>
+                <button class="auth-btn">Giriş Yap</button>
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Film ve Dizileri Keşfet</h1>
-    <p>IMDb puanları, fragmanlar ve kişisel izleme listeleri ile yeni içerikleri keşfet.</p>
-    <a href="#" class="btn">Keşfetmeye Başla</a>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <span class="hero-badge">🎬 FİLM</span>
+                    <h1 class="hero-title">28 Yıl Sonra: Kemik Tapınağı</h1>
+                    <div class="hero-rating">
+                        <span class="imdb-badge">⭐ 7.3 IMDb</span>
+                        <span class="stars">★★★★☆</span>
+                    </div>
+                    <p class="hero-description">
+                        Dr. Kelson, kendisini çok edi yeni bir ilişkinin içinde bulur. Bu ilişkinin sonuçlarının, alışık oldukları dünyayı değiştirebileceğinin farkındadırlar. Spike'ın Jimmy Crystal ile karşılaşması ise kaçamadığı bir kâbusa dönüşür.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">▶ Detayları Gör</button>
+                        <button class="btn btn-secondary">+ Listeye Ekle</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400/1a1a2e/00d4ff?text=Film+Poster" alt="Film Poster">
+                </div>
+            </div>
 
-  <footer>
-    © 2026 Moventa
-  </footer>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <span class="hero-badge">📺 DİZİ</span>
+                    <h1 class="hero-title">Breaking Bad</h1>
+                    <div class="hero-rating">
+                        <span class="imdb-badge">⭐ 9.5 IMDb</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <p class="hero-description">
+                        Bir kimya öğretmeni, kanser teşhisi aldıktan sonra uyuşturucu üretmeye başlar. Ailesinin finansal geleceğini güvence altına almak için bu tehlikeli yolda ilerler.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">▶ Detayları Gör</button>
+                        <button class="btn btn-secondary">+ Listeye Ekle</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400/1a1a2e/00d4ff?text=Dizi+Poster" alt="Dizi Poster">
+                </div>
+            </div>
 
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <span class="hero-badge">🎬 FİLM</span>
+                    <h1 class="hero-title">Inception</h1>
+                    <div class="hero-rating">
+                        <span class="imdb-badge">⭐ 8.8 IMDb</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <p class="hero-description">
+                        Bir hırsız, insanların rüyalarına girmek ve fikirlerini çalmak için teknoloji kullanır. Ancak bu sefer görev daha karmaşıktır: bir fikri imtiyaza sokmak.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">▶ Detayları Gör</button>
+                        <button class="btn btn-secondary">+ Listeye Ekle</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400/1a1a2e/00d4ff?text=Inception" alt="Inception Poster">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Controls -->
+        <div class="hero-controls">
+            <button class="control-btn prev" onclick="previousSlide()">❮</button>
+            <div class="dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+            <button class="control-btn next" onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+
+    <!-- Genre Filter -->
+    <section class="genre-filter">
+        <div class="container">
+            <h2>Tür Seçin</h2>
+            <div class="genre-grid">
+                <button class="genre-btn" onclick="filterByGenre(this)">🎬 Aksiyon</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">😂 Komedi</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">😱 Korku</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">💔 Dram</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">🔍 Gizem</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">🎭 Romantik</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">🚀 Bilim Kurgu</button>
+                <button class="genre-btn" onclick="filterByGenre(this)">🗡️ Fantezi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="movies-section" id="movies">
+        <div class="container">
+            <div class="section-header">
+                <h2>🔥 Popüler Filmler</h2>
+                <p>En çok izlenen filmler</p>
+            </div>
+
+            <div class="movies-grid">
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+1" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Shawshank Redemption</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.3</span>
+                            <span class="year">1994</span>
+                        </div>
+                        <p class="movie-genre">Dram, Suç</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- Movie Card 2 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+2" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Dark Knight</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.0</span>
+                            <span class="year">2008</span>
+                        </div>
+                        <p class="movie-genre">Aksiyon, Suç</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- Movie Card 3 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+3" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Pulp Fiction</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.9</span>
+                            <span class="year">1994</span>
+                        </div>
+                        <p class="movie-genre">Suç, Dram</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- Movie Card 4 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+4" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Forrest Gump</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.8</span>
+                            <span class="year">1994</span>
+                        </div>
+                        <p class="movie-genre">Dram, Romantik</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- Movie Card 5 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+5" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Interstellar</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.6</span>
+                            <span class="year">2014</span>
+                        </div>
+                        <p class="movie-genre">Bilim Kurgu, Dram</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- Movie Card 6 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Film+6" alt="Film">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Matrix</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.7</span>
+                            <span class="year">1999</span>
+                        </div>
+                        <p class="movie-genre">Aksiyon, Bilim Kurgu</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TV Series Section -->
+    <section class="tv-section" id="tv">
+        <div class="container">
+            <div class="section-header">
+                <h2>📺 Popüler Diziler</h2>
+                <p>En çok izlenen diziler</p>
+            </div>
+
+            <div class="movies-grid">
+                <!-- TV Card 1 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+1" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Game of Thrones</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.2</span>
+                            <span class="year">2011-2019</span>
+                        </div>
+                        <p class="movie-genre">Fantezi, Dram</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- TV Card 2 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+2" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Breaking Bad</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.5</span>
+                            <span class="year">2008-2013</span>
+                        </div>
+                        <p class="movie-genre">Suç, Dram</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- TV Card 3 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+3" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Stranger Things</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.7</span>
+                            <span class="year">2016-2024</span>
+                        </div>
+                        <p class="movie-genre">Bilim Kurgu, Gizem</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- TV Card 4 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+4" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Crown</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 8.6</span>
+                            <span class="year">2016-2023</span>
+                        </div>
+                        <p class="movie-genre">Dram, Biyografi</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- TV Card 5 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+5" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>The Office</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.0</span>
+                            <span class="year">2005-2013</span>
+                        </div>
+                        <p class="movie-genre">Komedi</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+
+                <!-- TV Card 6 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/200x300/1a1a2e/00d4ff?text=Dizi+6" alt="Dizi">
+                        <div class="movie-overlay">
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Sherlock</h3>
+                        <div class="movie-rating">
+                            <span class="imdb">⭐ 9.1</span>
+                            <span class="year">2010-2017</span>
+                        </div>
+                        <p class="movie-genre">Gizem, Suç</p>
+                        <button class="add-btn">+ Listeye Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Section -->
+    <section class="discover-section" id="discover">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎯 Ruh Haline Göre Keşfet</h2>
+                <p>Hissettiklerine göre film ve dizi bul</p>
+            </div>
+
+            <div class="mood-grid">
+                <div class="mood-card" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
+                    <h3>🔥 Aksiyon</h3>
+                    <p>Heyecan dolu ve dinamik</p>
+                </div>
+                <div class="mood-card" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);">
+                    <h3>😂 Komedi</h3>
+                    <p>Gülmek ve eğlenmek</p>
+                </div>
+                <div class="mood-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <h3>💔 Romantik</h3>
+                    <p>Aşk ve duygusal</p>
+                </div>
+                <div class="mood-card" style="background: linear-gradient(135deg, #4158d0 0%, #c850c0 100%);">
+                    <h3>😱 Korku</h3>
+                    <p>Ürpertici ve gerilimli</p>
+                </div>
+                <div class="mood-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <h3>🚀 Bilim Kurgu</h3>
+                    <p>Gelecek ve teknoloji</p>
+                </div>
+                <div class="mood-card" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                    <h3>🎭 Dram</h3>
+                    <p>Derin ve etkileyici</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Moventa ile Film Dünyasını Keşfet</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Film ve Dizi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Aktif Kullanıcı</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.8★</div>
+                    <div class="stat-label">Ortalama Puan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Destek</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Moventa</h4>
+                    <p>Film ve dizi keşif platformu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#movies">Filmler</a></li>
+                        <li><a href="#tv">Diziler</a></li>
+                        <li><a href="#discover">Keşfet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Yasal</h4>
+                    <ul>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                        <li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">🐦 Twitter</a>
+                        <a href="#">📷 Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Moventa. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
